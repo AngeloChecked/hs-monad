@@ -1,0 +1,25 @@
+name:                Monad
+version:             0.1.0.0
+
+dependencies:
+- base >= 4.7 && < 5
+- hspec
+
+library:
+  source-dirs: src
+
+executables:
+  Monad-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options: [-threaded, -rtsopts, -with-rtsopts=-N]
+    dependencies:
+    - Monad
+
+tests:
+  Monad-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options: [-threaded, -rtsopts, -with-rtsopts=-N]
+    dependencies:
+    - Monad
